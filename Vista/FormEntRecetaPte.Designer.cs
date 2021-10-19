@@ -1,0 +1,251 @@
+﻿
+namespace Mis_Recetas.Vista
+{
+    partial class FormEntRecetaPte
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtParentezco = new System.Windows.Forms.TextBox();
+            this.txtRetira = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEntregar = new System.Windows.Forms.Button();
+            this.dgvRecetas = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtParentezco);
+            this.panel2.Controls.Add(this.txtRetira);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(12, 367);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(760, 48);
+            this.panel2.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(286, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 21);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Parentezco:";
+            // 
+            // txtParentezco
+            // 
+            this.txtParentezco.Location = new System.Drawing.Point(391, 14);
+            this.txtParentezco.Name = "txtParentezco";
+            this.txtParentezco.Size = new System.Drawing.Size(205, 20);
+            this.txtParentezco.TabIndex = 11;
+            this.txtParentezco.TextChanged += new System.EventHandler(this.txtParentezco_TextChanged);
+            this.txtParentezco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParentezco_KeyPress);
+            // 
+            // txtRetira
+            // 
+            this.txtRetira.Location = new System.Drawing.Point(75, 14);
+            this.txtRetira.Name = "txtRetira";
+            this.txtRetira.Size = new System.Drawing.Size(192, 20);
+            this.txtRetira.TabIndex = 12;
+            this.txtRetira.TextChanged += new System.EventHandler(this.txtRetira_TextChanged);
+            this.txtRetira.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRetira_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 21);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Retira:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.txtDni);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(12, 56);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(760, 46);
+            this.panel1.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(232, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 21);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Apellido y Nombre:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(391, 14);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(205, 20);
+            this.txtNombre.TabIndex = 8;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyUp);
+            // 
+            // txtDni
+            // 
+            this.txtDni.Location = new System.Drawing.Point(75, 14);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(120, 20);
+            this.txtDni.TabIndex = 8;
+            this.txtDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDni_KeyPress);
+            this.txtDni.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDni_KeyUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(30, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "DNI:";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(412, 427);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(151, 29);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEntregar
+            // 
+            this.btnEntregar.Location = new System.Drawing.Point(221, 427);
+            this.btnEntregar.Name = "btnEntregar";
+            this.btnEntregar.Size = new System.Drawing.Size(151, 29);
+            this.btnEntregar.TabIndex = 17;
+            this.btnEntregar.Text = "Entregar";
+            this.btnEntregar.UseVisualStyleBackColor = true;
+            this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
+            // 
+            // dgvRecetas
+            // 
+            this.dgvRecetas.AllowUserToAddRows = false;
+            this.dgvRecetas.AllowUserToDeleteRows = false;
+            this.dgvRecetas.AllowUserToResizeColumns = false;
+            this.dgvRecetas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvRecetas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRecetas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRecetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecetas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecetas.Location = new System.Drawing.Point(12, 108);
+            this.dgvRecetas.MultiSelect = false;
+            this.dgvRecetas.Name = "dgvRecetas";
+            this.dgvRecetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvRecetas.Size = new System.Drawing.Size(760, 253);
+            this.dgvRecetas.TabIndex = 16;
+            this.dgvRecetas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecetas_CellContentClick);
+            this.dgvRecetas.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecetas_CellValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(253, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Entregar Recetas A Pacientes";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // FormEntRecetaPte
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(242)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(784, 472);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnEntregar);
+            this.Controls.Add(this.dgvRecetas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormEntRecetaPte";
+            this.Text = "FormEntRecetaPte";
+            this.Load += new System.EventHandler(this.FormEntRecetaPte_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtParentezco;
+        private System.Windows.Forms.TextBox txtRetira;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnEntregar;
+        private System.Windows.Forms.DataGridView dgvRecetas;
+        private System.Windows.Forms.Label label1;
+    }
+}

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>7.16139cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>2.60464cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Nro_Receta">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Nro_Receta.Value</Value>
+                              <Style>
+                                <FontFamily>Bahnschrift SemiBold</FontFamily>
+                                <FontSize>16pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Nro_Receta</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.50592cm</Top>
+        <Height>2.60464cm</Height>
+        <Width>7.16139cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>SU RECETA ES LA NÚMERO</Value>
+                <Style>
+                  <FontFamily>Bahnschrift SemiBold</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>0.39439cm</Top>
+        <Height>0.97042cm</Height>
+        <Width>7.16139cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Por favor conserve éste ticket</Value>
+                <Style>
+                  <FontFamily>Bahnschrift SemiLight</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>4.11056cm</Top>
+        <Height>0.97896cm</Height>
+        <Width>7.16139cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>2.12875in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>White</BackgroundColor>
+    </Style>
+  </Body>
+  <Width>2.84028in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.74037cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox8">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>CLÍNICA </Value>
+                  <Style>
+                    <FontFamily>Bahnschrift SemiBold</FontFamily>
+                    <FontSize>18pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>DEÁN FUNES</Value>
+                  <Style>
+                    <FontFamily>Bahnschrift SemiBold</FontFamily>
+                    <FontSize>18pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox8</rd:DefaultName>
+          <Top>0.218cm</Top>
+          <Left>1.48578cm</Left>
+          <Height>2.26412cm</Height>
+          <Width>5.33166cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Middle</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="LogoCDFNegro">
+          <Source>Embedded</Source>
+          <Value>LogoCDFNegro</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.218cm</Top>
+          <Left>0.35619cm</Left>
+          <Height>2.26412cm</Height>
+          <Width>1.8175cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>White</BackgroundColor>
+      </Style>
+    </PageHeader>
+    <PageHeight>11cm</PageHeight>
+    <PageWidth>10cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DsTicket">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>d4334478-a1f4-44f6-bfb1-c0c5d8518b48</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DsTicket</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Id_Receta">
+          <DataField>Id_Receta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Nro_Receta">
+          <DataField>Nro_Receta</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Id_Paciente">
+          <DataField>Id_Paciente</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Id_Medico">
+          <DataField>Id_Medico</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Id_Estado">
+          <DataField>Id_Estado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Id_Usuario_Registra">
+          <DataField>Id_Usuario_Registra</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Usuario_Registra">
+          <DataField>Fecha_Usuario_Registra</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Id_Usuario_Entrega_A_Medico">
+          <DataField>Id_Usuario_Entrega_A_Medico</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Usuario_Entrega_A_Medico">
+          <DataField>Fecha_Usuario_Entrega_A_Medico</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Id_Usuario_Recibe_De_Medico">
+          <DataField>Id_Usuario_Recibe_De_Medico</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Usuario_Recibe_De_Medico">
+          <DataField>Fecha_Usuario_Recibe_De_Medico</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Id_Usuario_Entrega_A_Paciente">
+          <DataField>Id_Usuario_Entrega_A_Paciente</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Usuario_Entrega_A_Paciente">
+          <DataField>Fecha_Usuario_Entrega_A_Paciente</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Id_Usuario_Entrega_A_Archivo">
+          <DataField>Id_Usuario_Entrega_A_Archivo</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Entrega_A_Archivo">
+          <DataField>Fecha_Entrega_A_Archivo</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Id_Usuario_Desecha">
+          <DataField>Id_Usuario_Desecha</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha_Usuario_Desecha">
+          <DataField>Fecha_Usuario_Desecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Nombre_Retira">
+          <DataField>Nombre_Retira</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Parentezco">
+          <DataField>Parentezco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DsTicket</rd:DataSetName>
+        <rd:SchemaPath>G:\Users\Facundo\Desktop\PROYECTO TESIS\Mis_Recetas\Dataset\DsTicket.xsd</rd:SchemaPath>
+        <rd:TableName>Receta</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>RecetaTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="LogoCDFNegro">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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
+k0vg//0j3OecRemSAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>aae07ea2-57b9-4004-9366-3f0394778e10</rd:ReportID>
+</Report>

@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84AF075B-88EE-4C92-98A1-6E07E2077DE9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Mis_Recetas</RootNamespace>
+    <AssemblyName>Mis_Recetas</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\CmdArchivarRecetas.cs" />
+    <Compile Include="Controlador\CmdBuscarReceta.cs" />
+    <Compile Include="Controlador\CmdDesecharRecetas.cs" />
+    <Compile Include="Controlador\CmdEntRecetaArchivada.cs" />
+    <Compile Include="Controlador\CmdEntRecetaMedico.cs" />
+    <Compile Include="Controlador\CmdEntRecetaPte.cs" />
+    <Compile Include="Controlador\CmdLogin.cs" />
+    <Compile Include="Controlador\CmdMedicos.cs" />
+    <Compile Include="Controlador\CmdModificarPaciente.cs" />
+    <Compile Include="Controlador\CmdModificarReceta.cs" />
+    <Compile Include="Controlador\CmdRecRecetaMedico.cs" />
+    <Compile Include="Controlador\CmdRecRecetaPte.cs" />
+    <Compile Include="Controlador\CmdReportes.cs" />
+    <Compile Include="Controlador\CmdUsuarios.cs" />
+    <Compile Include="Controlador\Conexion.cs" />
+    <Compile Include="Crystal\TicketReporteReceta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketReporteReceta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dataset\DsRecArchivadas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRecArchivadas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsRecetasDesechadas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRecetasDesechadas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsRecetasEntregadasPorMedico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRecetasEntregadasPorMedico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsRecetasPorEstado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRecetasPorEstado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsRecetasPorMedicoYFecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRecetasPorMedicoYFecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsRecetasRecibidasPorMedico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRecetasRecibidasPorMedico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsTicket.cs">
+      <DependentUpon>DsTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DsTicket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Estado.cs" />
+    <Compile Include="Modelo\Medico.cs" />
+    <Compile Include="Modelo\Paciente.cs" />
+    <Compile Include="Modelo\Receta.cs" />
+    <Compile Include="Modelo\Rol.cs" />
+    <Compile Include="Modelo\TipoDocumento.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vista\FormAdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormAdminPanel.Designer.cs">
+      <DependentUpon>FormAdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormArchivarRecetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormArchivarRecetas.Designer.cs">
+      <DependentUpon>FormArchivarRecetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormAyuda.Designer.cs">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormBuscarReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormBuscarReceta.Designer.cs">
+      <DependentUpon>FormBuscarReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormDesecharRecetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormDesecharRecetas.Designer.cs">
+      <DependentUpon>FormDesecharRecetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormEntRecetaArchivada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormEntRecetaArchivada.Designer.cs">
+      <DependentUpon>FormEntRecetaArchivada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormEntRecetaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormEntRecetaMedico.Designer.cs">
+      <DependentUpon>FormEntRecetaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormEntRecetaPte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormEntRecetaPte.Designer.cs">
+      <DependentUpon>FormEntRecetaPte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormListadoReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormListadoReportes.Designer.cs">
+      <DependentUpon>FormListadoReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormModificarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormModificarMedico.Designer.cs">
+      <DependentUpon>FormModificarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormModificarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormModificarPaciente.designer.cs">
+      <DependentUpon>FormModificarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormModificarReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormModificarReceta.Designer.cs">
+      <DependentUpon>FormModificarReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormModificarUsuario.Designer.cs">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRecetasEntregadasPorMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRecetasEntregadasPorMedico.Designer.cs">
+      <DependentUpon>FormRecetasEntregadasPorMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRecetasPorEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRecetasPorEstado.Designer.cs">
+      <DependentUpon>FormRecetasPorEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRecetasRecibidasPorMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRecetasRecibidasPorMedico.Designer.cs">
+      <DependentUpon>FormRecetasRecibidasPorMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRecRecetaMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRecRecetaMedico.Designer.cs">
+      <DependentUpon>FormRecRecetaMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRecRecetaPte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRecRecetaPte.Designer.cs">
+      <DependentUpon>FormRecRecetaPte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRegistrarMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRegistrarMedico.Designer.cs">
+      <DependentUpon>FormRegistrarMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormRegistrarUsuario.Designer.cs">
+      <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormReporteRecArchivadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReporteRecArchivadas.Designer.cs">
+      <DependentUpon>FormReporteRecArchivadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormReporteRecetasDesechadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReporteRecetasDesechadas.Designer.cs">
+      <DependentUpon>FormReporteRecetasDesechadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormReporteRecPorFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReporteRecPorFechas.designer.cs">
+      <DependentUpon>FormReporteRecPorFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormReporteTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormReporteTicket.Designer.cs">
+      <DependentUpon>FormReporteTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormTerminos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormTerminos.Designer.cs">
+      <DependentUpon>FormTerminos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormTerminosYCondiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormTerminosYCondiciones.Designer.cs">
+      <DependentUpon>FormTerminosYCondiciones.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Crystal\TicketReporteReceta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TicketReporteReceta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reporte\ReporteRecArchivadas.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteRecetasDesechadas.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteRecetasEntregadasPorMedico.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteRecetasPorEstado.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteRecetasPorMedicoYFecha.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteRecetasRecibidasPorMedico.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteTicket.rdlc" />
+    <EmbeddedResource Include="Vista\FormAdminPanel.resx">
+      <DependentUpon>FormAdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormArchivarRecetas.resx">
+      <DependentUpon>FormArchivarRecetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormAyuda.resx">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormBuscarReceta.resx">
+      <DependentUpon>FormBuscarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormDesecharRecetas.resx">
+      <DependentUpon>FormDesecharRecetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormEntRecetaArchivada.resx">
+      <DependentUpon>FormEntRecetaArchivada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormEntRecetaMedico.resx">
+      <DependentUpon>FormEntRecetaMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormEntRecetaPte.resx">
+      <DependentUpon>FormEntRecetaPte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormListadoReportes.resx">
+      <DependentUpon>FormListadoReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormModificarMedico.resx">
+      <DependentUpon>FormModificarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormModificarPaciente.resx">
+      <DependentUpon>FormModificarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormModificarReceta.resx">
+      <DependentUpon>FormModificarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormModificarUsuario.resx">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRecetasEntregadasPorMedico.resx">
+      <DependentUpon>FormRecetasEntregadasPorMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRecetasPorEstado.resx">
+      <DependentUpon>FormRecetasPorEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRecetasRecibidasPorMedico.resx">
+      <DependentUpon>FormRecetasRecibidasPorMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRecRecetaMedico.resx">
+      <DependentUpon>FormRecRecetaMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRecRecetaPte.resx">
+      <DependentUpon>FormRecRecetaPte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRegistrarMedico.resx">
+      <DependentUpon>FormRegistrarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormRegistrarUsuario.resx">
+      <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormReporteRecArchivadas.resx">
+      <DependentUpon>FormReporteRecArchivadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormReporteRecetasDesechadas.resx">
+      <DependentUpon>FormReporteRecetasDesechadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormReporteRecPorFechas.resx">
+      <DependentUpon>FormReporteRecPorFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormReporteTicket.resx">
+      <DependentUpon>FormReporteTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormTerminos.resx">
+      <DependentUpon>FormTerminos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormTerminosYCondiciones.resx">
+      <DependentUpon>FormTerminosYCondiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Dataset\DsRecArchivadas.xsc">
+      <DependentUpon>DsRecArchivadas.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecArchivadas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRecArchivadas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsRecArchivadas.xss">
+      <DependentUpon>DsRecArchivadas.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasDesechadas.xsc">
+      <DependentUpon>DsRecetasDesechadas.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasDesechadas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRecetasDesechadas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsRecetasDesechadas.xss">
+      <DependentUpon>DsRecetasDesechadas.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasEntregadasPorMedico.xsc">
+      <DependentUpon>DsRecetasEntregadasPorMedico.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasEntregadasPorMedico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRecetasEntregadasPorMedico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsRecetasEntregadasPorMedico.xss">
+      <DependentUpon>DsRecetasEntregadasPorMedico.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasPorEstado.xsc">
+      <DependentUpon>DsRecetasPorEstado.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasPorEstado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRecetasPorEstado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsRecetasPorEstado.xss">
+      <DependentUpon>DsRecetasPorEstado.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasPorMedicoYFecha.xsc">
+      <DependentUpon>DsRecetasPorMedicoYFecha.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasPorMedicoYFecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRecetasPorMedicoYFecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsRecetasPorMedicoYFecha.xss">
+      <DependentUpon>DsRecetasPorMedicoYFecha.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasRecibidasPorMedico.xsc">
+      <DependentUpon>DsRecetasRecibidasPorMedico.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsRecetasRecibidasPorMedico.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRecetasRecibidasPorMedico.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsRecetasRecibidasPorMedico.xss">
+      <DependentUpon>DsRecetasRecibidasPorMedico.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsTicket.xsc">
+      <DependentUpon>DsTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DsTicket.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsTicket.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DsTicket.xss">
+      <DependentUpon>DsTicket.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Secretaria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo CDF Blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restoreIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkbox_all_true-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkbox_all_false-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoCDFNegro.bmp" />
+    <Content Include="Resources\Logo CDF Negro.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ayuda-icon.jpg" />
+    <None Include="Resources\ayuda.png" />
+    <Content Include="Resources\favicon-32x32.ico" />
+    <Content Include="Resources\Logo 50 x 15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

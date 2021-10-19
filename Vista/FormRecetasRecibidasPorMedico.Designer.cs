@@ -1,0 +1,157 @@
+﻿
+namespace Mis_Recetas.Vista
+{
+    partial class FormRecetasRecibidasPorMedico
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cboMedico = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dsRecetasRecibidasPorMedico = new Mis_Recetas.Dataset.DsRecetasRecibidasPorMedico();
+            this.dsRecetasRecibidasPorMedicoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recetaTableAdapter = new Mis_Recetas.Dataset.DsRecetasRecibidasPorMedicoTableAdapters.RecetaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRecetasRecibidasPorMedico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRecetasRecibidasPorMedicoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recetaBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(235)))), ((int)(((byte)(213)))));
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(761, 38);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(291, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 26);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Generar reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cboMedico
+            // 
+            this.cboMedico.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMedico.FormattingEnabled = true;
+            this.cboMedico.Location = new System.Drawing.Point(142, 4);
+            this.cboMedico.Name = "cboMedico";
+            this.cboMedico.Size = new System.Drawing.Size(121, 25);
+            this.cboMedico.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(235)))), ((int)(((byte)(213)))));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Seleccione médico";
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.recetaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Mis_Recetas.Reporte.ReporteRecetasRecibidasPorMedico.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 38);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(761, 264);
+            this.reportViewer1.TabIndex = 8;
+            // 
+            // dsRecetasRecibidasPorMedico
+            // 
+            this.dsRecetasRecibidasPorMedico.DataSetName = "DsRecetasRecibidasPorMedico";
+            this.dsRecetasRecibidasPorMedico.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsRecetasRecibidasPorMedicoBindingSource
+            // 
+            this.dsRecetasRecibidasPorMedicoBindingSource.DataSource = this.dsRecetasRecibidasPorMedico;
+            this.dsRecetasRecibidasPorMedicoBindingSource.Position = 0;
+            // 
+            // recetaBindingSource
+            // 
+            this.recetaBindingSource.DataMember = "Receta";
+            this.recetaBindingSource.DataSource = this.dsRecetasRecibidasPorMedicoBindingSource;
+            // 
+            // recetaTableAdapter
+            // 
+            this.recetaTableAdapter.ClearBeforeFill = true;
+            // 
+            // FormRecetasRecibidasPorMedico
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(761, 302);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cboMedico);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.Name = "FormRecetasRecibidasPorMedico";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FormRecetasRecibidasPorMedico";
+            this.Load += new System.EventHandler(this.FormRecetasRecibidasPorMedico_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsRecetasRecibidasPorMedico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsRecetasRecibidasPorMedicoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recetaBindingSource)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboMedico;
+        private System.Windows.Forms.Label label1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource recetaBindingSource;
+        private System.Windows.Forms.BindingSource dsRecetasRecibidasPorMedicoBindingSource;
+        private Dataset.DsRecetasRecibidasPorMedico dsRecetasRecibidasPorMedico;
+        private Dataset.DsRecetasRecibidasPorMedicoTableAdapters.RecetaTableAdapter recetaTableAdapter;
+    }
+}
