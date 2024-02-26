@@ -45,6 +45,7 @@ namespace Mis_Recetas.Vista
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAltaUsuario = new System.Windows.Forms.Button();
+            this.btnBuscarReceta = new System.Windows.Forms.Button();
             this.gpReportes.SuspendLayout();
             this.gpboxRecetas.SuspendLayout();
             this.gpboxPacientes.SuspendLayout();
@@ -77,6 +78,7 @@ namespace Mis_Recetas.Vista
             // 
             // gpboxRecetas
             // 
+            this.gpboxRecetas.Controls.Add(this.btnBuscarReceta);
             this.gpboxRecetas.Controls.Add(this.btnModificarReceta);
             this.gpboxRecetas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpboxRecetas.ForeColor = System.Drawing.Color.DarkSlateGray;
@@ -90,9 +92,9 @@ namespace Mis_Recetas.Vista
             // btnModificarReceta
             // 
             this.btnModificarReceta.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnModificarReceta.Location = new System.Drawing.Point(7, 30);
+            this.btnModificarReceta.Location = new System.Drawing.Point(7, 22);
             this.btnModificarReceta.Name = "btnModificarReceta";
-            this.btnModificarReceta.Size = new System.Drawing.Size(244, 44);
+            this.btnModificarReceta.Size = new System.Drawing.Size(244, 27);
             this.btnModificarReceta.TabIndex = 1;
             this.btnModificarReceta.Text = "Modificar Receta";
             this.btnModificarReceta.UseVisualStyleBackColor = true;
@@ -222,6 +224,17 @@ namespace Mis_Recetas.Vista
             this.btnAltaUsuario.UseVisualStyleBackColor = true;
             this.btnAltaUsuario.Click += new System.EventHandler(this.btnAltaUsuario_Click);
             // 
+            // btnBuscarReceta
+            // 
+            this.btnBuscarReceta.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnBuscarReceta.Location = new System.Drawing.Point(7, 62);
+            this.btnBuscarReceta.Name = "btnBuscarReceta";
+            this.btnBuscarReceta.Size = new System.Drawing.Size(244, 27);
+            this.btnBuscarReceta.TabIndex = 2;
+            this.btnBuscarReceta.Text = "Buscar Receta";
+            this.btnBuscarReceta.UseVisualStyleBackColor = true;
+            this.btnBuscarReceta.Click += new System.EventHandler(this.btnBuscarReceta_Click);
+            // 
             // FormAdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,5 +282,6 @@ namespace Mis_Recetas.Vista
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAltaUsuario;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarReceta;
     }
 }

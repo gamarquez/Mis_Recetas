@@ -92,10 +92,6 @@ namespace Mis_Recetas.Controlador
             SqlDataAdapter da = new SqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            //if (dt.Rows[0][0] != null)
-            //{
-            //    nroReceta = (int)dt.Rows[0][0];
-            //}
             if(dt.Rows.Count > 0)
             {
                 nroReceta = (int)dt.Rows[0][0];
@@ -107,6 +103,36 @@ namespace Mis_Recetas.Controlador
 
             con.Close();
             return nroReceta;
+        }
+
+        public bool buscarNumeroDni(int dni)
+        {
+            bool resultado = false;
+            try
+            {
+                SqlConnection con = new SqlConnection(Conexion.Cn);
+                con.Open();
+                var query = "SELECT Nro_Documento FROM Paciente WHERE Nro_Documento =@nrodni";
+                var comando = new SqlCommand(query, con);
+                comando.Parameters.AddWithValue("nrodni", dni);
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                int check = Convert.ToInt32(comando.ExecuteScalar());
+                if(check == 0)
+                {
+                    resultado = false;
+                }
+                else
+                {
+                    resultado = true;
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex.ToString());
+            }
+
+            return resultado;
         }
 
         public bool NuevoPaciente(Paciente p)

@@ -77,5 +77,11 @@ namespace Mis_Recetas.Vista
             FormModificarUsuario mu = new FormModificarUsuario();
             mu.Show();
         }
+
+        private void btnBuscarReceta_Click(object sender, EventArgs e)
+        {
+            FormBuscarRecetaAdmin fbra = new FormBuscarRecetaAdmin();
+            fbra.Show();
+        }
     }
 }

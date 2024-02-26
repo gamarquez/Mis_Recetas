@@ -160,7 +160,7 @@ namespace Mis_Recetas.Vista
             if (dialogResult == DialogResult.Yes)
             {
                 com.ActualizarReceta_A_ListaParaEntregar(idRecetasArray);
-                enviarMails(correos);
+                //enviarMails(correos);
 
                 if (idRecetasArray.Length > 1) //Si la cantidad de recetas seleccionadas es mayor a 1
                 {

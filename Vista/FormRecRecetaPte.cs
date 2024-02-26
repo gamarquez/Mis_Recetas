@@ -1,5 +1,4 @@
 ﻿using Mis_Recetas.Controlador;
-using Mis_Recetas.Crystal;
 using MisRecetas.Modelo;
 using System;
 using System.Collections.Generic;
@@ -22,13 +21,6 @@ namespace Mis_Recetas.Vista
         }
 
         CmdRecRecetaPte com = new CmdRecRecetaPte();
-
-
-        static string user = ConfigurationManager.AppSettings["UsuarioTickets"];
-        static string pass = ConfigurationManager.AppSettings["PassTickets"];
-        static string server = ConfigurationManager.AppSettings["ServidorTickets"];
-        static string db = ConfigurationManager.AppSettings["DBTickets"];
-        static string printer = ConfigurationManager.AppSettings["Impresora"];
 
         private void FormRecRecetaPte_Load(object sender, EventArgs e)
         {
@@ -174,15 +166,27 @@ namespace Mis_Recetas.Vista
 
         private void btnNuevoPaciente_Click(object sender, EventArgs e)
         {
-            seccionRegistrar.Enabled = false;
-            seccionBuscarPaciente.Enabled = true;
-            seccionNuevoPaciente.Enabled = true;
-            limpiar();
-            lblNom.Text = "-";
-            lblApe.Text = "-";
-            lblNroDoc.Text = "-";
-            lblTipoDoc.Text = "-";
-            lblEmail.Text = "-";
+            int DniBuscar = Convert.ToInt32(txtNroDocumento.Text);
+            CmdRecRecetaPte cmd = new CmdRecRecetaPte();
+            bool valorComparable = cmd.buscarNumeroDni(DniBuscar);
+
+            if (valorComparable == false)
+            {
+                seccionRegistrar.Enabled = false;
+                seccionBuscarPaciente.Enabled = true;
+                seccionNuevoPaciente.Enabled = true;
+                limpiar();
+                lblNom.Text = "-";
+                lblApe.Text = "-";
+                lblNroDoc.Text = "-";
+                lblTipoDoc.Text = "-";
+                lblEmail.Text = "-";
+            }
+
+            else
+            {
+                MessageBox.Show("El dni consultado se encuentra registrado, por favor revise.", "Alerta");
+            }
         }
 
         private void btnCargarPaciente_Click(object sender, EventArgs e)
@@ -316,22 +320,26 @@ namespace Mis_Recetas.Vista
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar)) // Valida que el ingreso sea una letra
                 e.Handled = false;
-            else if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            else if (Char.IsControl(e.KeyChar)) // Valida si la tecla presionada es una letra de control, ej Borrar
+                e.Handled = false;
+            else if (Char.IsSeparator(e.KeyChar)) // Valida si la tecla presionada es la barra espaciadora o TAB
                 e.Handled = false;
             else
-                e.Handled = true;          //el resto de teclas pulsadas se desactivan
+                e.Handled = true; // Desactiva el resto de las teclas que no cumplan con las condiciones
         }
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsLetter(e.KeyChar))
+            if (Char.IsLetter(e.KeyChar)) // Valida que el ingreso sea una letra
                 e.Handled = false;
-            else if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            else if (Char.IsControl(e.KeyChar)) // Valida si la tecla presionada es una letra de control, ej Borrar
+                e.Handled = false;
+            else if (Char.IsSeparator(e.KeyChar)) // Valida si la tecla presionada es la barra espaciadora o TAB
                 e.Handled = false;
             else
-                e.Handled = true;          //el resto de teclas pulsadas se desactivan
+                e.Handled = true; // Desactiva el resto de las teclas que no cumplan con las condiciones
         }
 
         private void dgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
