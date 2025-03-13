@@ -53,7 +53,7 @@ namespace Mis_Recetas.Controlador
             var query = "SELECT p.Id_Paciente FROM Paciente p JOIN Tipo_Documento t ON p.id_tipodocumento = t.id_tipodocumento WHERE t.Descripcion = @tipoDni and p.Nro_Documento = @nroDni";
             var comando = new SqlCommand(query, con);
             comando.Parameters.AddWithValue("tipoDni", tipoDni);
-            comando.Parameters.AddWithValue("nroDni", nroDocumento);
+            comando.Parameters.AddWithValue("nroDni", Convert.ToString(nroDocumento));
             SqlDataAdapter da = new SqlDataAdapter(comando);
             DataTable dt = new DataTable();
             da.Fill(dt);
